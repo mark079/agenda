@@ -1,0 +1,46 @@
+<%- include('includes/head') %>
+  <%- include('includes/nav') %>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 my-3">
+          <h1 class="text-center">Cadastro/Login</h1>
+          <p class="text-center lead">Faça cadastro ou login</p>
+          <%- include('includes/messages') %>
+          <div class="row">
+            <div class="col">
+              <form action="/login/register" method="POST">
+                <input type="hidden" name="_csrf" value=<%- csrfToken %>>
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" name="email" placeholder="Digite seu email aqui">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Senha</label>
+                  <input type="password" class="form-control" name="password" placeholder="Digite sua senha aqui">
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+              </form>
+            </div>
+            <div class="col">
+              <form action="/login/login" method="POST">
+                <input type="hidden" name="_csrf" value=<%- csrfToken %>>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <input type="email" class="form-control" name="email" placeholder="Digite seu email aqui">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Senha</label>
+                  <input type="password" class="form-control" name="password" placeholder="Digite sua senha aqui">
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+
+    <%- include('includes/footer') %>
