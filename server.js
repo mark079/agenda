@@ -16,6 +16,7 @@ const helmet = require('helmet');
 const csrf = require('csurf');
 const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware');
 
+// adicionado pelo server
 app.use(helmet());
 
 app.use(express.urlencoded({ extended: true }));
