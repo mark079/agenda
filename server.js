@@ -18,9 +18,15 @@ const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/midd
 
 // adicionado pelo server
 app.use(
+<<<<<<< HEAD
     helmet({
         contentSecurityPolicy: false
     })
+=======
+  helmet({
+      contentSecurityPolicy: false
+  })
+>>>>>>> 6f1da15edf4213c1a74ee095c711278a0af638fe
 );
 
 app.use(express.urlencoded({ extended: true }));
